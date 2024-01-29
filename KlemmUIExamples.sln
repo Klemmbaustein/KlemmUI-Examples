@@ -4,6 +4,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "HelloWorld\HelloWorld.vcxproj", "{B0FAC4E6-367C-48FF-BE52-D3E9B4718D4A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{99324208-6A16-49B7-B98B-15B1935810B0} = {99324208-6A16-49B7-B98B-15B1935810B0}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8CF38DC6-BE20-421A-9896-F034033CB6A6}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE.txt = LICENSE.txt
+		makefile.kbld = makefile.kbld
+		README.md = README.md
+		setup.ps1 = setup.ps1
+		setup.sh = setup.sh
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KlemmUI", "KlemmUI\KlemmUI.vcxproj", "{99324208-6A16-49B7-B98B-15B1935810B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{61C8F526-9218-4629-88CB-165E0DDD94F6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Timer", "Timer\Timer.vcxproj", "{F59CA960-D61D-4A1A-A2AD-F00847505366}"
+	ProjectSection(ProjectDependencies) = postProject
+		{99324208-6A16-49B7-B98B-15B1935810B0} = {99324208-6A16-49B7-B98B-15B1935810B0}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +43,28 @@ Global
 		{B0FAC4E6-367C-48FF-BE52-D3E9B4718D4A}.Release|x64.Build.0 = Release|x64
 		{B0FAC4E6-367C-48FF-BE52-D3E9B4718D4A}.Release|x86.ActiveCfg = Release|Win32
 		{B0FAC4E6-367C-48FF-BE52-D3E9B4718D4A}.Release|x86.Build.0 = Release|Win32
+		{99324208-6A16-49B7-B98B-15B1935810B0}.Debug|x64.ActiveCfg = Debug|x64
+		{99324208-6A16-49B7-B98B-15B1935810B0}.Debug|x64.Build.0 = Debug|x64
+		{99324208-6A16-49B7-B98B-15B1935810B0}.Debug|x86.ActiveCfg = Debug|x64
+		{99324208-6A16-49B7-B98B-15B1935810B0}.Debug|x86.Build.0 = Debug|x64
+		{99324208-6A16-49B7-B98B-15B1935810B0}.Release|x64.ActiveCfg = Release|x64
+		{99324208-6A16-49B7-B98B-15B1935810B0}.Release|x64.Build.0 = Release|x64
+		{99324208-6A16-49B7-B98B-15B1935810B0}.Release|x86.ActiveCfg = Release|x64
+		{99324208-6A16-49B7-B98B-15B1935810B0}.Release|x86.Build.0 = Release|x64
+		{F59CA960-D61D-4A1A-A2AD-F00847505366}.Debug|x64.ActiveCfg = Debug|x64
+		{F59CA960-D61D-4A1A-A2AD-F00847505366}.Debug|x64.Build.0 = Debug|x64
+		{F59CA960-D61D-4A1A-A2AD-F00847505366}.Debug|x86.ActiveCfg = Debug|Win32
+		{F59CA960-D61D-4A1A-A2AD-F00847505366}.Debug|x86.Build.0 = Debug|Win32
+		{F59CA960-D61D-4A1A-A2AD-F00847505366}.Release|x64.ActiveCfg = Release|x64
+		{F59CA960-D61D-4A1A-A2AD-F00847505366}.Release|x64.Build.0 = Release|x64
+		{F59CA960-D61D-4A1A-A2AD-F00847505366}.Release|x86.ActiveCfg = Release|Win32
+		{F59CA960-D61D-4A1A-A2AD-F00847505366}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{99324208-6A16-49B7-B98B-15B1935810B0} = {61C8F526-9218-4629-88CB-165E0DDD94F6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {67404DE6-B90A-4CE3-9A27-AA627FCE1213}

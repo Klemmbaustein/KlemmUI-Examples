@@ -1,0 +1,15 @@
+{
+	"targets": [
+		{
+			"name": "KlemmUI",
+			"type": "makefile",
+			"makefile": "KlemmUI/makefile.kbld"
+		},
+		{
+			"name": "HelloWorld",
+			"type": "makefile",
+			"makefile": "HelloWorld/makefile.kbld",
+			"dependencies": [ "KlemmUI" ]
+		}
+	]
+}
