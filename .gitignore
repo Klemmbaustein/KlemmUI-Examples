@@ -361,3 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# KlemmBuild build files
+Build
+*.exe
+HelloWorld/HelloWorld
+*.dll
