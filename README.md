@@ -17,7 +17,7 @@ Examples for the [KlemmUI UI library](https://github.com/Klemmbaustein/KlemmUI).
 
 Visual Studio 2022 with the "Desktop developement with C++" workload is required.
 
-1. Run setup.ps1 in the Developer Powershell.
+1. Run `./setup.ps1` in the Developer Powershell.
 
 
 2.  Either:
@@ -29,5 +29,5 @@ Visual Studio 2022 with the "Desktop developement with C++" workload is required
 
 [KlemmBuild](https://github.com/Klemmbaustein/KlemmBuild) is required to build the examples on Linux.
 
-1. Run [`setup.sh`]().
-1. 
+1. Run `./setup.sh`.
+2. Run `KlemmBuild`.

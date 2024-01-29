@@ -45,11 +45,13 @@ static void ResetTimer()
 static UIButton* MakeTimerButton(void(*OnPressed)(), const std::string& Name, TextRenderer* Font)
 {
 	return static_cast<UIButton*>((new UIButton(true, 0, Vector3f32(1), OnPressed))
+		->SetPaddingSizeMode(UIBox::SizeMode::PixelRelative)
 		->SetMinSize(Vector2f32(0.3f, 0))
 		->SetSizeMode(UIBox::SizeMode::PixelRelative)
 		->SetHorizontalAlign(UIBox::Align::Centered)
-		->AddChild((new UIText(0.5f, Vector3f32(0), Name, Font))
-			->SetTextSizeMode(UIBox::SizeMode::PixelRelative)));
+		->AddChild((new UIText(0.75f, Vector3f32(0), Name, Font))
+			->SetTextSizeMode(UIBox::SizeMode::PixelRelative)
+			->SetPaddingSizeMode(UIBox::SizeMode::PixelRelative)));
 }
 
 int main()
@@ -58,14 +60,14 @@ int main()
 	Application::SetShaderPath("../KlemmUI/Shaders");
 
 	// Initialize the app window with a window title, window flag and window resolution.
-	Application::Initialize("Timer", Application::NO_RESIZE_BIT, Vector2ui(640, 480));
+	Application::Initialize("Timer", 0, Vector2ui(640, 480));
 
 #if _WIN32
 	TextRenderer* Font = new TextRenderer("C:/Windows/Fonts/segoeui.ttf");
 #else
 #endif
 
-	UIText* TimerText = new UIText(1.0f, Vector3f32(1), "00:00:00", Font);
+	UIText* TimerText = new UIText(1.5f, Vector3f32(1), "00:00:00", Font);
 	TimerText
 		->SetTextSizeMode(UIBox::SizeMode::PixelRelative);
 
@@ -77,6 +79,8 @@ int main()
 		->SetHorizontalAlign(UIBox::Align::Centered)
 		->AddChild(TimerText)
 		->AddChild((new UIBox(false, 0))
+			->SetPadding(0, 0, 0.25f, 0)
+			->SetPaddingSizeMode(UIBox::SizeMode::PixelRelative)
 			->AddChild(MakeTimerButton(StartTimer, "Start", Font))
 			->AddChild(MakeTimerButton(StopTimer, "Stop", Font))
 			->AddChild(MakeTimerButton(ResetTimer, "Reset", Font)));
