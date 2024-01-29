@@ -10,6 +10,13 @@
 			"type": "makefile",
 			"makefile": "HelloWorld/makefile.kbld",
 			"dependencies": [ "KlemmUI" ]
+		},
+		{
+			"name": "Timer",
+			"type": "makefile",
+			"makefile": "Timer/makefile.kbld",
+			"dependencies": [ "KlemmUI" ]
 		}
+
 	]
 }

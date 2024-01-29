@@ -367,3 +367,4 @@ Build
 *.exe
 HelloWorld/HelloWorld
 *.dll
+Timer/Timer
