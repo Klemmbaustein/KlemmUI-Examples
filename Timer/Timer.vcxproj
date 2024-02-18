@@ -75,11 +75,14 @@
     <OutDir>$(ProjectDir)</OutDir>
     <TargetName>$(ProjectName)-$(Configuration)</TargetName>
     <LibraryPath>$(SolutionDir)KlemmUI\lib\$(Configuration);$(LibraryPath)</LibraryPath>
-    <IntDir>$(ProjectDir)obj\</IntDir>
+    <IntDir>$(ProjectDir)obj\$(Configuration)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>$(SolutionDir)KlemmUI\Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)KlemmUI\lib\$(Configuration);$(LibraryPath)</LibraryPath>
+    <OutDir>$(ProjectDir)</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Configuration)</IntDir>
+    <TargetName>$(ProjectName)-$(Configuration)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
