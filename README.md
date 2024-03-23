@@ -8,7 +8,7 @@ Examples for the [KlemmUI UI library](https://github.com/Klemmbaustein/KlemmUI).
 |--------------|-------------------------------------------------|
 | HelloWorld   | Creates a window with the title "Hello, World!" |
 | Timer        | A simple timer app that measures time.          |
-| Calculator   | A calculator app.                               |
+| Calculator   | A calculator app. Unfinished.                   |
 
 
 ## Building the examples
